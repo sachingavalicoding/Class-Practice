@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const data = [
   {
     productName: "Air Max 270",
@@ -177,19 +179,36 @@ const data = [
   },
 ];
 
-/*  Filters */
 
-const rajshri = data.filter(
-  (element) =>
-    element.gender.toLowerCase() == "unisex" &&
-    element.price >= 100 &&
-    element.ratings == 4.5 &&
-    element.brand.toLowerCase() == "nike"
-);
 
 const Display = () => {
+const [upto , setUpto] = useState(1000);
+const [input , setInput] = useState(0);
+/*  Filters */
+
+const rajshri = data.filter(  (element )=> element.price <= upto );
+
+const SortData = (price) => {
+   setUpto(price);
+}
+
+
   return (
     <>
+
+    <div className="w-full flex items-center justify-center gap-4">
+      <button onClick={() => SortData("under100")}  className="px-8 py-3 bg-slate-200 text-xl rounded-md "> Under  100 </button>
+      <button onClick={() => SortData("upto100")}  className="px-8 py-3 bg-slate-200 text-xl rounded-md "> Upto  100 </button>
+
+
+    </div>
+
+    <div className="w-full flex items-center justify-center gap-4 mt-8 ">
+   <input onChange={(e) => setInput(e.target.value)} type="number" value={input} className="px-8  border-2 py-3 bg-slate-200 text-xl rounded-md  w-96 " />
+   <button onClick={() => SortData(input)}  className="px-8 py-3 bg-slate-200 text-xl rounded-md "> Filter </button>
+   </div>
+
+
       <ul className="border-2 grid grid-cols-2 gap-4 place-items-center  px-4 py-6 w-[1080px] mx-auto mt-20 flex-col ">
         {
           /*  Map function  */
