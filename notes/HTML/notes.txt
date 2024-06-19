@@ -1,0 +1,22 @@
+
+
+HTML Introduction
+HTML (HyperText Markup Language) is the standard language used to create web pages. It describes the structure of a web page and consists of a series of elements that define the different parts of the content.
+
+
+HTML Elements:
+
+HTML elements are the building blocks of HTML pages.
+An HTML element is defined by a start tag, some content, and an end tag.
+Example:
+html
+Copy code
+<p>This is a paragraph.</p>
+
+
+HTML Tags:
+
+Tags are the element names surrounded by angle brackets.
+Most HTML tags come in pairs: an opening tag <tagname> and a closing tag </tagname>.
+Example of a paired tag:
+html
