@@ -1,11 +1,7 @@
-// input 
-let radius = 5;
-let height = 24;
-const PI = 3.14;
-// cal 
+let dailyActivities = ["eat", "sleep" , "One"];
 
-let vol = PI * ( radius * radius) * height;
 
-// output
+dailyActivities[2]  = "two";
 
-console.log(ans);
+
+console.log(dailyActivities);
